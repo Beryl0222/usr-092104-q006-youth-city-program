@@ -1,0 +1,17 @@
+{
+  "event_id": "sample-101",
+  "event_type": "INTERACTION_ACKNOWLEDGED",
+  "aggregate_type": "itinerary_slot",
+  "aggregate_id": "slot-2026-10-04-013",
+  "occurred_at": "2026-10-04T11:05:00+08:00",
+  "version": 7,
+  "summary": "接待方确认与机械工程专业学生就岗位方向完成交流",
+  "payload": {
+    "program_id": "wmyc-2026-autumn",
+    "participant_id": "pt-00057",
+    "host_id": "host-precision-mfg",
+    "by_party": "host",
+    "acknowledged_at": "2026-10-04T11:05:00+08:00",
+    "topic_refs": ["数控工艺工程师", "顶岗实习通道"]
+  }
+}

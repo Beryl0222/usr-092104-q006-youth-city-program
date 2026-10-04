@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "青年城市体验履约领域事件",
+  "description": "跨单位事件信封：事件类型只追加、不复用；业务字段统一放入 payload。事件类型与聚合的对应关系以 src/events/catalog.js 为唯一登记处，本文件保持同步。",
   "type": "object",
   "required": [
     "event_id",
@@ -23,7 +24,27 @@
         "SLOT_ASSIGNED",
         "ITINERARY_CHANGED",
         "ATTENDANCE_VERIFIED",
-        "OUTCOME_LINKED"
+        "OUTCOME_LINKED",
+        "PARTICIPANT_REGISTERED",
+        "PARTICIPANT_WITHDRAWN",
+        "FOLLOWUP_CONSENT_REVOKED",
+        "HOST_COMMITMENT_CREATED",
+        "HOST_CANCELLED",
+        "SLOT_OFFERED",
+        "SLOT_ACCEPTED",
+        "SLOT_DECLINED",
+        "TRANSPORT_ARRANGED",
+        "ACCOMMODATION_ARRANGED",
+        "CHANGE_CONSENT_REQUESTED",
+        "CHANGE_CONSENT_DECIDED",
+        "CHECKIN_RECORDED",
+        "PROXY_CHECKIN_REJECTED",
+        "INTERACTION_ACKNOWLEDGED",
+        "LATE_INTERACTION_REVIEWED",
+        "DISCLOSURE_GRANTED",
+        "DISCLOSURE_REVOKED",
+        "EMPLOYMENT_RESULT_CLAIMED",
+        "DUPLICATE_CLAIM_REJECTED"
       ]
     },
     "aggregate_type": {
@@ -45,11 +66,16 @@
     },
     "version": {
       "type": "integer",
-      "minimum": 1
+      "minimum": 1,
+      "description": "聚合流内的单调版本号，从 1 开始，并发提交采用乐观并发"
     },
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "payload": {
+      "type": "object",
+      "description": "事件业务字段；各事件类型的必需字段见 src/events/catalog.js"
     }
   },
   "additionalProperties": true

@@ -2,8 +2,22 @@
   "event_id": "sample-006",
   "event_type": "PREFERENCE_CONFIRMED",
   "aggregate_type": "program_participant",
-  "aggregate_id": "aggregate-006",
+  "aggregate_id": "participant:wmyc-2026-autumn:2026110207",
   "occurred_at": "2026-09-20T12:00:00+08:00",
-  "version": 1,
-  "summary": "青年城市体验履约领域样例"
+  "version": 2,
+  "summary": "青年城市体验履约领域样例：学生确认专业兴趣、无障碍需求与可用时段",
+  "payload": {
+    "program_id": "wmyc-2026-autumn",
+    "student_id": "2026110207",
+    "name": "李想",
+    "school": "三峡大学",
+    "grade": "大三",
+    "majors": ["机械设计制造及其自动化"],
+    "interests": ["先进制造", "装备研发"],
+    "accessibility_needs": [],
+    "available_windows": [
+      { "date": "2026-10-04", "from": "08:30", "to": "17:30" }
+    ],
+    "contact_consent": true
+  }
 }

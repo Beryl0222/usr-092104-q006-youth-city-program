@@ -1,10 +1,11 @@
 {
   "name": "youth-city-program",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "领域事件基础校验",
+  "description": "青年城市体验履约后端：偏好先行、同意变更、分级履约事实、最小披露与有来源结果",
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "start": "node src/backend/http.js"
   }
 }
